@@ -9,13 +9,13 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 public class PGDataSource {
 	
-	public static Connection createConnection() throws Exception {
-		
-		DataSource dataSource = createDataSource();
-		Connection conn = dataSource.getConnection();
-		
-		return conn;
-	}
+//	public static Connection createConnection() throws Exception {
+//		
+//		DataSource dataSource = createDataSource();
+//		Connection conn = dataSource.getConnection();
+//		
+//		return conn;
+//	}
 	private static DataSource createDataSource() {
 		
 		final String host = "localhost";

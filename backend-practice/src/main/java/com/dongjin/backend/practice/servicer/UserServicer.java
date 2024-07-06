@@ -9,7 +9,7 @@ public class UserServicer {
 //	UserRepository userrepo = new UserRepository();
 
 	@Autowired
-	private UserRepository userRepository;
+	private static UserRepository userRepository;
 	
 	public static void addUser(User newUser) {
 		String name = newUser.getName();
@@ -18,7 +18,10 @@ public class UserServicer {
 		System.out.println(newUser.getUsername());
 		System.out.println(newUser.getId());
 		
+		System.out.println(userRepository);
+		
 		//add the new user through UserRepository.
+		userRepository.save(newUser);
 	}
 	
 }
